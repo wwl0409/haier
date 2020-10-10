@@ -1,0 +1,72 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "49731",
+      "name": "电脑",
+      "font_class": "31",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "425647",
+      "name": "电视",
+      "font_class": "dianshi",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "1044243",
+      "name": "厨房电器安装",
+      "font_class": "chufangdianqianzhuang",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "1327697",
+      "name": "图标-酒柜",
+      "font_class": "tubiao-jiugui",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "3879225",
+      "name": "空调",
+      "font_class": "kongtiao",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "5982856",
+      "name": "洗衣机",
+      "font_class": "xiyiji",
+      "unicode": "ec78",
+      "unicode_decimal": 60536
+    },
+    {
+      "icon_id": "9166436",
+      "name": "热水器",
+      "font_class": "reshuiqi",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "10135409",
+      "name": "有害垃圾-废旧小家电",
+      "font_class": "youhailaji-feijiuxiaojiadian",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "10408796",
+      "name": "冰箱",
+      "font_class": "bingxiang",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    }
+  ]
+}

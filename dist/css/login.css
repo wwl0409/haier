@@ -1,0 +1,98 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+
+html {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+.body {
+  overflow: visible;
+  position: relative;
+  z-index: 0; }
+  .body .main {
+    min-height: 100% !important; }
+
+.header {
+  width: 1519.2px;
+  height: 60px; }
+  .header .header_box {
+    height: 60px;
+    width: 1236px;
+    margin: 0 auto;
+    display: flex; }
+    .header .header_box .header_box_left {
+      width: 618px;
+      height: 60px;
+      line-height: 60px; }
+      .header .header_box .header_box_left .header_left_a {
+        width: 71px;
+        height: 21px;
+        display: inline-block; }
+        .header .header_box .header_box_left .header_left_a img {
+          width: 100%; }
+      .header .header_box .header_box_left .header_left_span {
+        width: 64px;
+        height: 17.6px;
+        font-size: 16px;
+        color: #333;
+        margin-left: 18px; }
+    .header .header_box .header_box_right {
+      width: 618px;
+      height: 60px;
+      line-height: 60px; }
+      .header .header_box .header_box_right .box_right_a {
+        margin-left: 330px;
+        padding: 0;
+        color: #666;
+        font-size: 10px; }
+        .header .header_box .header_box_right .box_right_a .box_right_span {
+          color: #32beff;
+          font-size: 14px; }
+        .header .header_box .header_box_right .box_right_a .box_right_span2 {
+          color: #32beff;
+          font-size: 14px; }
+          .header .header_box .header_box_right .box_right_a .box_right_span2 .box_right_a2 {
+            font-size: 14px; }
+
+.content {
+  width: 1519.2px;
+  height: 634px;
+  background: url("../images/beijing.png") no-repeat;
+  background-size: 100% 100%; }
+  .content .content_box {
+    width: 1236px;
+    height: 590px;
+    margin: 0 auto;
+    padding: 102px 0 0 618px; }
+    .content .content_box .container {
+      margin: 70px 150px;
+      width: 400px; }
+    .content .content_box #login {
+      width: 400px; }
+    .content .content_box .alert {
+      margin: 0px 0px 10px 0px;
+      padding: 5px;
+      text-align: center;
+      display: none; }
+
+.bottombar {
+  background: #2b2c2d;
+  padding: 20px 0;
+  color: #515252; }
+  .bottombar .bottom_content {
+    width: 1236px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0;
+    color: #666;
+    font-size: 10px; }
+    .bottombar .bottom_content a {
+      font-size: 12px; }
+    .bottombar .bottom_content .right {
+      float: right; }

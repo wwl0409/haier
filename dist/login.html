@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/login.css">
+  <title>Document</title>
+</head>
+<body>
+   <div class="body">
+		 <div class="main">
+			 <!-- 头部 -->
+			 <div class="header">
+				 <div class="header_box">
+					<div class="header_box_left">
+						<a class="header_left_a" href="//www.haier.com/cn/" spm-d="1">
+							<img src="https://image.haier.com/cn/images/haier2019_logo.jpg" url="//www.haier.com/cn/images/haier2019_logo.jpg" class="logo" alt="logo">
+						</a>
+						<span class="header_left_span">账号登陆</span>
+					</div>
+					<div class="header_box_right">
+						<a class="box_right_a" href="regist.html">
+							<span class="box_right_span">注册海尔账号</span>
+						</a>
+						<span class="box_right_span2" style="padding-left:20px;margin-left:20px;border-left:1px solid #e5e5e5;">
+							<a class="box_right_a2" href="#"  style="font-size:14px; color: #111111;">梦享
+								<i style="top:-3px;position:relative;margin:2px;">+</i>会员首次激活登录</a>
+						</span>
+					</div>
+         </div>
+			 </div>
+			 <!-- 内容 -->
+			 <div class="content">
+				 <div class="content_box">
+					<div class = 'container'>
+						<div class = 'panel panel-primary' id = 'login'>
+							<div class = 'panel-heading'>
+								登陆
+							</div>
+							<div class = 'panel-body'>
+								<div class = 'form-group'>
+									<label for="username">用户名：</label>
+									<input type="text" name = 'username' placeholder="用户名" class = 'form-control'>
+								</div>
+								<div class = 'form-group'>
+									<label for="password">密码：</label>
+									<input type="password" name = 'password' placeholder="密码" class = 'form-control'>
+								</div>
+								<div class="alert alert-danger" role="alert">...</div>
+								<!-- <a href="regist.html">马上注册</a> -->
+								<button class = 'btn btn-primary pull-right' id = 'btn1'>登陆</button>
+							</div>
+						</div>
+					</div>
+				 </div>
+			 </div>
+			 <!-- 底部 -->
+			 <div class="bottombar">
+				<div class="bottom_content" data-trs-ta-event-key="aditem" data-trs-ta-event-type="adshow" data-trs-ta-event-itemtype="公用底部_专卖店">
+					<a href="//www.haier.com/cn/about_haier/">关于海尔</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+					<!--<a href="">新闻中心</a> &nbsp;&nbsp;|&nbsp;&nbsp;-->
+						<a href="//www.haier.com/contact/">联系我们</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="//www.haier.com/cn/terms_conditions/">法律声明</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="//www.haier.com/help/">帮助中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						<a href="//www.haier.com/store.shtml" target="_blank" data-trs-ta-event-key="aditem" data-trs-ta-event-type="adshow" data-trs-ta-event-itemtype="公用底部_专卖店" data-trs-ta-event-item="公用底部_专卖店" data-trs-ta-event-itemname="公用底部_专卖店">海尔门店</a>  
+						<!--<a href="">站点地图</a> -->
+						<div class="right">
+								<span>鲁ICP备09096283</span> &nbsp;|&nbsp; <span>© 2000-2020 Haier.com. All rights reserved.</span> 
+						</div>
+				</div>
+			 </div>
+		 </div>
+	 </div> 
+</body>
+<script type = 'module'>
+  import ajax from './js/ajax.js';
+  var oBtn = document.getElementById("btn1");
+  var aInput = document.querySelectorAll(".form-group input");
+  var oAlert = document.querySelector(".alert");
+  oBtn.onclick = function(){
+    ajax({
+      type: 'post',
+      url: 'login.php',
+      data: {
+        username: aInput[0].value,
+        password: aInput[1].value,
+      },
+      success: function(msg){
+        // console.log(msg);
+        var obj = JSON.parse(msg); //JSON.parse (<anonymous>) 返回的字符串不是json格式。
+        if(obj.code){
+          oAlert.className = 'alert alert-danger';
+        }else{
+          oAlert.className = 'alert alert-success';
+        }
+        oAlert.style.display = 'block';
+        oAlert.innerHTML = obj.msg;
+      },
+      error: function(msg){
+        console.log(msg);
+      }
+    })
+  }
+</script>
+</html>
